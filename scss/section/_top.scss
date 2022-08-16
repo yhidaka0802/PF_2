@@ -1,0 +1,28 @@
+.top {
+  padding-top: 1%;
+  &_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 98%;
+    height: 97vh;
+    background-image: url("../images/mainvisual.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 70% center;
+    @include mq(pc){
+      height: 99vh;
+    }
+  }
+
+  &_text {
+    color: $cWhite;
+    font-size: 60px;
+    text-align: center;
+    
+    @include mq(sp){
+      font-size: 40px;
+    }
+  }
+}

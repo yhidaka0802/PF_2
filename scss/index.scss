@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+@import "base";
+@import "config";
+@import "hamburg";
+@import "mixin";
+@import "animation";
+@import "./section/header";
+@import "./section/top";
+@import "./section/company";
+@import "./section/job";
+@import "./section/interview";
+@import "./section/entry";
+@import "./section/footer";
+
+
+
+.inner {
+  padding: 1%;
+}
+
+.section_title {
+  font-size: 60px;
+  line-height: 1;
+  @include mq(sp){
+    font-size: 35px;
+  }
+}
+
+span{
+  font-weight: bold;
+  color: $cBlue;
+  font-size: 24px;
+}
+

@@ -1,0 +1,104 @@
+@import "mixin";
+
+.openbtn {
+  position: relative;
+  z-index: 9999;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  @include mq(sp){
+    width: 50px;
+  }
+  
+  span {
+    position: absolute;
+    left: 14px;
+    display: inline-block;
+    width: 50%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: $cBlack;
+    transition: all .4s;
+    @include mq(sp){
+      width: 80%;
+    }
+    
+    &:nth-of-type(1){
+      top: 10px;
+    }
+    &:nth-of-type(2){
+      top: 25px;
+    }
+    &:nth-of-type(3){
+      top: 40px;
+    }
+  }
+
+  p{
+    position: absolute;
+    top: 15px;
+    left: 70px;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 12px;
+
+    @include mq(sp){
+      display: none;
+    }
+  }
+  &.active span {
+    &:nth-of-type(1){
+      top: 18px;
+      left: 10px;
+      width: 60%;
+      transform: translateY(6px) rotate(-45deg);
+    }
+    &:nth-of-type(2){
+      opacity: 0;
+    }
+    &:nth-of-type(3){
+      top: 30px;
+      left: 10px;
+      width: 60%;
+      transform: translateY(-6px) rotate(45deg);
+    }
+  }
+}
+
+#g-nav{
+  position: fixed;
+  top: -120%;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  background-color: $cWhite;
+  transition: all .6s;
+
+  &.panelactive{
+    top: 0;
+  }
+
+  ul {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+  }
+
+  li {
+    list-style: none;
+    text-align: center;
+    a{
+      display: block;
+      padding: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: bold;
+      font-size: 32px;
+    }
+  }
+}

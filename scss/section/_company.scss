@@ -1,0 +1,93 @@
+.company {
+  .section_title{
+    margin-top: 10px;
+  }
+  &_photo {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      margin-right: 1%;
+      margin-bottom: 1%;
+      width: calc(97% / 4);
+      height: 40vh;
+
+      @include mq(tb){
+        width: calc(99% / 2);
+        &:nth-child(2n){
+          margin-right: 0;
+        }
+      }
+      @include mq(sp){
+        height: 25vh;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+      
+      img {
+        height: 100%;
+
+        object-fit: cover;
+      }
+
+    }
+  }
+
+  &_container {
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(tb){
+      flex-direction: column;
+    }
+  }
+
+  &_text {
+    width: 44%;
+    margin-top: 2%;
+    padding-left: 5%;
+
+    @include mq(tb){
+      margin: 5% 0;
+      width: 90%;
+      padding-left: 10%;
+    }
+
+    h4 {
+      margin-top: 20px;
+      font-weight: normal;
+      font-size: 40px;
+      line-height: 2em;
+      @include mq(sp){
+        line-height: 1.5em;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+    p{
+      width:80%;
+      margin-top: 20px;
+      @include mq(sp){
+        width: 90%;
+      }
+    }
+  }
+
+  &_img {
+    width: 49.5%;
+    height: 55vh;
+
+    @include mq(tb){
+      width: 100%;
+    }
+
+    img {
+      height: 100%;
+
+      object-fit: cover;
+      object-position: 9% center;
+    }
+  }
+}

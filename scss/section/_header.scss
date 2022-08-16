@@ -1,0 +1,55 @@
+.header{
+  &_container {
+    position: fixed;
+    top: 40px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3%;
+    width: 94%;
+
+    @include mq(sp){
+      width: 92%;
+    }
+
+    .site-title a{
+      color: $cBlue;
+
+      @include mq(sp){
+        font-size: 30px;
+      }
+    }
+
+    .recruit_btn{
+      padding: 4px 19px;
+      border: 1px solid $cBlack;
+      background-color: $cWhite;
+      
+      &:hover {
+        background-color: $cBlack;
+        color: $cWhite;
+        transition: all .6s;
+      }
+    }
+
+    .header_line {
+      display: inline-block;
+      width: 33%;
+      height: 2px;
+      background-color: $cBlack;
+      content: "";
+
+      @include mq(pc){
+        width: 25%;
+      }
+      @include mq(tb){
+        width: 15%;
+      }
+      @include mq(sp){
+        display: none;
+        width: 0%;
+      }
+    }
+  }
+}

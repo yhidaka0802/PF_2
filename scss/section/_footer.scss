@@ -1,0 +1,116 @@
+footer {
+  padding: 100px 0 20px;
+  background-color: $cfooter_bg;
+  text-align: center;
+
+  .site_title {
+    a {
+      color: $cBlue;
+
+      @include mq(sp){
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+.footer {
+  &_list {
+    display: flex;
+    justify-content: center;
+    margin: 70px auto 50px;
+
+    @include mq(sp){
+      align-items: center;
+      flex-direction: column;
+      width: 150px;
+      border-left: solid 3px $cBlue;
+      padding: 10px 0;
+
+    }
+  }
+
+  &_item {
+    margin-right: 20px;
+    padding-right: 28px;
+    border-right: solid 3px $cBlue;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1;
+
+    @include mq(sp){
+      margin-right: 0;
+      padding-right: 0;
+      border-right: none;
+      margin-bottom: 20px;
+    }
+    
+    
+    &:last-child{
+      margin-right: 0;
+      padding-right: 0;
+      border-right: none;
+      @include mq(sp){
+        margin-bottom: 0;
+      }
+    }
+
+    a:hover {
+      color: $cBlue;
+    }
+  }
+
+  &_text {
+    font-size: 15px;
+  }
+}
+
+#page-top {
+  position: fixed;
+  right: 30px;
+  bottom: 10px;
+  z-index: 2;
+  opacity: 0;
+  transform: translateX(100px);
+
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    color: $cBlue;
+    text-align: center;
+    font-weight: bold;
+    transition: all .6s;
+  }
+
+  &.LeftMove {
+    animation: LeftAnime .6s forwards;
+  }
+
+  &.RightMove {
+    animation: RightAnime .5s forwards;
+  }
+}
+
+@keyframes LeftAnime {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes RightAnime {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(200px);
+  }
+}

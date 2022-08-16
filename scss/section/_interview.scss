@@ -1,0 +1,99 @@
+.interview {
+  padding-top: 100px;
+  border-bottom: 1px solid $cBlack;
+  padding-bottom: 50px;
+  position: relative;
+
+  &::before{
+    content: "";
+    width: 100%;
+    height: 1px;
+    border-bottom: solid 1px $cBlack;
+    position: absolute;
+    left: 0px;
+    bottom: -8px;
+  }
+
+  .section_title{
+    margin-bottom: 100px;
+    text-align: center;
+  }
+
+  &_item{
+    width: 350px;
+    height: 600px;
+    margin: 0 25px;
+    opacity: 0.6;
+    transition: 1s;
+    background-color: $cWhite;
+  }
+
+  .slick-active {
+    opacity: 1;
+  }
+
+  &_img{
+    height: 400px;
+    @include mq(tb){
+      height: 300px;
+    }
+    img{
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+.item1 {
+  img {
+    object-position: 70% 50%;
+  }
+}
+
+  &_text {
+    padding: 5% 8%;
+    span {
+      color: $cBlack;
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    h5{
+      font-size: 30px;
+      font-weight: normal;
+      @include mq(tb){
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.prev, .next {
+  width: 35px;
+  height: 35px;
+  border-top: 2px solid $cBlack;
+  border-right: 2px solid $cBlack;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+}
+
+.prev {
+  left: 10%;
+  transform: rotate(-135deg);
+  &:hover{
+    border-top: 2px solid $cBlue;
+    border-right: 2px solid $cBlue;
+    transition: .6s;
+  }
+}
+
+.next {
+  right: 10%;
+  transform: rotate(45deg);
+  &:hover{
+    border-top: 2px solid $cBlue;
+    border-right: 2px solid $cBlue;
+    transition: .6s;
+  }
+}

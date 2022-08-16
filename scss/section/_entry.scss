@@ -1,0 +1,93 @@
+.entry {
+  padding: 100px 0;
+
+  .section_title{
+    margin-bottom: 100px;
+    text-align: center;
+  }
+
+  .inner {
+    text-align: center;
+    margin: 0 auto;
+    width: 95%;
+  }
+
+  &_form{
+    display: inline-block;
+    margin: 0 auto;
+
+    &_title{
+      width: 150px;
+      height: 100%;
+      font-size: 24px;
+      text-align: left;
+
+    }
+    &_box {
+      padding-left: 8px;
+      width: 310px;
+      height: 40px;
+      border-width: 1px;
+      background-color: $cGray_pale;
+      font-size: 24px;
+    }
+    &_select{
+      padding: 7px;
+      width: 323px;
+      height: 45px;
+      background-color: $cGray_pale;
+      font-size: 24px;
+    }
+    &_textarea {
+      margin-bottom: 40px;
+      padding: 7px;
+      width: 310px;
+      height: 180px;
+      background-color: $cGray_pale;
+      font-size: 24px;
+    }
+  }
+
+  &_box{
+    display: flex;
+    margin-bottom: 25px;
+    @include mq(tb){
+      flex-direction: column;
+    }
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  &_button{
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 40px;
+    background-color: $cBlack;
+    color: $cWhite;
+    font-size: 20px;
+    font-family: $font;
+    cursor: pointer;
+    border: none;
+    transition: all .6s;
+
+    &:hover{
+      background-color: $cWhite;
+      color: $cBlack;
+      border: 1px solid $cBlack;
+    }
+  }
+
+  &_text {
+    margin-top: 100px;
+    font-size: 60px;
+    @include mq(tb){
+      font-size: 45px;
+    }
+    @include mq(sp){
+      font-size: 24px;
+    }
+  }
+}

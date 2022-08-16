@@ -1,0 +1,36 @@
+@import "config";
+
+body {
+  color: $cBlack;
+  word-break: break-all;
+  font-size: 18px;
+  font-family: $font;
+  line-height: 1.8;
+  width: 100%;
+}
+
+a {
+  color: $cBlack;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $Bfont;
+}
+
+span {
+  font-family: $font;
+}
